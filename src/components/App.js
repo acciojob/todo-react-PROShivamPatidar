@@ -24,15 +24,15 @@ setTodo(newTodo);
         <button onClick={addTodo}>Add Todo</button>
         {
           todo[0]!="undefind" &&
-          <div>
+          <ul>
             {
               todo.map((value,index)=>{
                 return(
-                  <p>{value}<button onClick={()=>deleteTodo(index)}>Delete</button></p>
+                  <li>{value}<button onClick={()=>deleteTodo(index)}>Delete</button></li>
                 )
               })
             }
-          </div>
+          </ul>
         }
     </div>
   )
